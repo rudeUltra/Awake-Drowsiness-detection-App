@@ -32,7 +32,7 @@
 		}
 
 		.pimg1{
-		  background:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("../static/assets/shibua_gif.gif");
+		  background-image: url(https://images.unsplash.com/photo-1609701538303-a5e2874d3426?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cm9hZCUyMGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&w=1000&q=80);
 		  background-repeat: no-repeat;
 		  min-height:100%;
 		  background-size: cover; 
@@ -51,7 +51,7 @@
 		}
 
 		.section-dark{
-		  background-image: linear-gradient(120deg,rgb(19, 29, 41),rgb(37, 95, 110));
+		  background-color: black;
 		  color:#ddd;
 		}
 
@@ -90,14 +90,14 @@
 			height: 250px;
 			background-color: none;
 			/*position: relative;*/
-			animation: movingl 3s;
+			
 		}
 		.r-div{
 			width:310px;
 			height: 250px;
 			background-color: none;
 			position: relative;
-			animation: movingr 3s;
+			
 		}
 		#div1{animation-timing-function: linear;}
 		#div2{animation-timing-function: linear;}
@@ -197,11 +197,10 @@
 		}
 		 .title {
 			 font-weight: 800;
-			 color: transparent;
+			 color: #FAFFAF;
 			 font-size: 55px;
-			 background: url("../static/assets/shibua_gif.gif") repeat;
-			 background-position: 40% 50%;
-			 -webkit-background-clip: text;
+			
+			 
 			 position: relative;
 			 text-align: center;
 			 line-height: 90px;
@@ -212,7 +211,9 @@
 			 text-align: center;
 			 text-transform: uppercase;
 			 padding-top: 10px;
-			 color:rgba(28, 54, 79,.9);
+			 color:#FAFFAF;
+			 padding-bottom: 50px;
+
 		}
 
 		/* ================ The Timeline ================ */
@@ -262,13 +263,17 @@
 		  position: relative;
 		  width: 300px;
 		  float: left;
-		  text-align: right;
+		  text-align: center;
+		  
+		  margin-bottom: 200px;
 		}
 
 		.direction-r {
 		  position: relative;
 		  width: 300px;
 		  float: right;
+		  text-align: center;
+		  margin-bottom: 200px;
 		}
 
 		.flag-wrapper {
@@ -375,7 +380,7 @@
 		.desc {
 		  margin: 1em 0.75em 0 0;
 		  
-		  font-size: 0.77777em;
+		  font-size: 20px;
 		  font-style: italic;
 		  line-height: 1.5em;
 		  color: rgb(204, 218, 235);
@@ -387,167 +392,8 @@
 
 		/* ================ Timeline Media Queries ================ */
 
-		@media screen and (max-width: 660px) {
-
-		.timeline {
-		    width: 100%;
-		    padding: 4em 0 1em 0;
-		}
-
-		.timeline li {
-		    padding: 2em 0;
-		}
-
-		.direction-l,
-		.direction-r {
-		    float: none;
-		    width: 100%;
-
-		    text-align: center;
-		}
-
-		.flag-wrapper {
-		    text-align: center;
-		}
-
-		.flag {
-		    background: rgb(255,255,255);
-		    color: rgb(19, 29, 41);
-		    z-index: 15;
-		}
-
-		.direction-l .flag:before,
-		.direction-r .flag:before {
-		  position: absolute;
-		  top: -30px;
-		    left: 50%;
-		    content: ' ';
-		    display: block;
-		    width: 12px;
-		    height: 12px;
-		    margin-left: -9px;
-		    background: #fff;
-		    border-radius: 10px;
-		    color: rgb(19, 29, 41);
-		    border: 4px solid rgb(255,80,80);
-		    z-index: 10;
-		}
-
-		.direction-l .flag:after,
-		.direction-r .flag:after {
-		    content: "";
-		    position: absolute;
-		    left: 50%;
-		    top: -8px;
-		    height: 0;
-		    width: 0;
-		    margin-left: -8px;
-		    border: solid transparent;
-		    border-bottom-color: rgb(255,255,255);
-		    color: rgb(19, 29, 41);
-		    border-width: 8px;
-		    pointer-events: none;
-		}
-
-		.time-wrapper {
-		    display: block;
-		    position: relative;
-		    margin: 4px 0 0 0;
-		    z-index: 14;
-		}
-
-		.direction-l .time-wrapper {
-		    float: none;
-		}
-
-		.direction-r .time-wrapper {
-		    float: none;
-		}
-
-		.desc {
-
-		    position: relative;
-		    margin: 1em 0 0 0;
-		    padding: 1em;
-		    background: none;
-		    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-		    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-		    box-shadow: 0 0 1px rgba(0,0,0,0.20);
-		    
-		  z-index: 15;
-		}
-
-		.direction-l .desc,
-		.direction-r .desc {
-		    position: relative;
-		    margin: 1em 1em 0 1em;
-		    padding: 1em;
-		    z-index: 15;
-		}
-
-		}
-
-		@media screen and (min-width: 400px ?? max-width: 660px) {
-
-		.direction-l .desc,
-		.direction-r .desc {
-		    margin: 1em 4em 0 4em;
-		}
-
-		}
-		/* stat alert*/
-		.text-effect {
-		  position: relative;
-		   
-		  /* The blend modes mute the colors, so let's bump them up*/
-		  filter: contrast(110%) brightness(190%);
-		}
-
-		.neon {
-		  position: relative;
-		  text-shadow: 0 0 2rem rgba(red, 0.2);
-
-		  &::before,
-		  &::after {
-		    /*Add two copies of the text on their own layer*/
-		    content: attr(data-text);
-		    
-		    color: red;
-		    
-		    /*And blur them to create the neon effect with the blend-mode below*/
-		    filter: blur(0.01em);
-		    
-		    position: absolute;
-		    top: 0; left: 0;
-		    pointer-events: none;
-		  }
-		  
-		  /* Set the top copy to difference. This creates the knock-out effect with a bit of glow*/
-		  &::after {
-		    mix-blend-mode: difference;
-		  }
-		}
-
-		/*=== Pen styling, ignore*/
-
-		.text-effect { 
-		  flex: 0 1 0;
-		  text-align: center;
-		}
-
-		/* Style text*/
-		.neon {
-		  display: inline-block;
-		  font: 300 50px/1 serif;
-		  text-transform: uppercase;
-		  margin: 0;
-		  
-		  &:focus { outline: none; border: 1px dotted white; }
-		}
-		.text-style{
-		transition: 4s ease-in-out;
-		letter-spacing: 6px;
-		}
+		
+		
 	</style>	
 	
 </head>
@@ -561,16 +407,17 @@
 
   <section class="section section-dark">
     <div class="text-effect">
-  		<h1 class = "neon text-style">STAT ALERT!!</h1><br> 
+  		<h1 class = "neon text-style">STAY ALERT!</h1><br> 
 	</div>
     <ul class="timeline">
     		<!-- Item 1 -->
 				<li>
 					<div id="div1" class="direction-r r-div">
-						<div class="flag-wrapper">
-							<span class="flag">4,12,000</span>
+						<div class="">
+							<span class="" style="font-size: 20px;">SIUU</span>
 							
 						</div>
+						<img src="data:image/jpeg;base64,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">
 						<div class="desc">In 2018, the number of accidental fatalities across India amounted to around <b>412 thousand</b>. The rate of accidental deaths in 2018 was about 2.6 percent higher than the previous year. Road accidents had the highest number of fatalities followed by railway incidents.</div>
 					</div>
 				</li>
@@ -579,7 +426,7 @@
 				<li>
 					<div id="div2" class="direction-l l-div">
 						<div class="flag-wrapper">
-							<span class="flag">70</span>
+							<span class="" style="font-size: 20px;">70</span>
 						</div>
 						<div class="desc">In 2018, the number of females aged between 25 and 35 years being killed in road accidents amounted to around five thousand across India. Each year, about three to five percent of the GDP of the country was invested in road accidents. About <b>70 percent</b> of accidents involved young Indians. The country has about one percent of the global vehicle population but it accounted for six percent of the world's road traffic accidents.</div>
 					</div>
@@ -589,7 +436,7 @@
 				<li>
 					<div id="div3" class="direction-r r-div">
 						<div class="flag-wrapper">
-							<span class="flag">35,000</span>	
+							<span class="" style="font-size: 20px;">35,000</span>	
 						</div>
 						<div class="desc">In 2018, the number of male victims in road accidents wherein the age of the victim was between 25 to 35 years amounted to around <b>35 thousand</b> across India. Each year, about three to five percent of the GDP of the country was invested in road accidents. About 70 percent of accidents involved young Indians.</div>
 					</div>
@@ -599,7 +446,7 @@
 				<li>
 					<div id="div1" class="direction-l l-div">
 						<div class="flag-wrapper">
-							<span class="flag">16.7</span>
+							<span class="" style="font-size: 20px;">16.7</span>
 						</div>
 						<div class="desc">Maharashtra, an Indian state with a population share of over nine percent, had the highest share of about <b>16.7 percent</b> of total accidental deaths in India during 2018. Meanwhile, Uttar Pradesh with the largest population share, accounted for only about nine percent of the accidental deaths in the country. Majority of accidental casualties reported were between ages 30 and 45 years.</div>
 					</div>
@@ -609,7 +456,7 @@
 				<li>
 					<div id="div2" class="direction-r r-div">
 						<div class="flag-wrapper">
-							<span class="flag">17</span>	
+							<span class="" style="font-size: 20px;">17</span>	
 						</div>
 						<div class="desc">Roughly around <b>17</b> accident-related deaths occur across India every hour. Fewer cops and empty roads at night, and sometimes even during the day seem to enable motorists to do away with the traffic rules. However, efforts were made to reduce these discrepancies. The police had equipped themselves with night vision speed guns to identify the culprits. Over speeding fine was increased in the amendment of the Motor Vehicles Act as well.</div>
 					</div>
@@ -619,7 +466,7 @@
 				<li>
 					<div id="div3" class="direction-l l-div">
 						<div class="flag-wrapper">
-							<span class="flag">0.6</span>	
+							<span class="" style="font-size: 20px;">0.6</span>	
 						</div>
 						<div class="desc">Road accident severity measured by the number of persons killed per 100 accidents, has seen an increase of <b>0.6 percentage</b> points in 2018 over the previous year. The country has about one percent of the global vehicle population but it accounted for six percent of the world's road traffic accidents.</div>
 					</div>
@@ -629,7 +476,7 @@
 				<li>
 					<div id="div1" class="direction-r r-div">
 						<div class="flag-wrapper">
-							<span class="flag">11</span>
+							<span class="" style="font-size: 20px;">11</span>
 						</div>
 						<div class="desc">India, ranks 1st in the number of road accident deaths across the 199 countries reported in the World Road Statistics, 2018 followed by China and US. As per the WHO Global Report on Road Safety 2018, India accounts for almost <b>11 percent</b> of the accident related deaths in the World.</div>
 					</div>
@@ -639,16 +486,16 @@
 				<li>
 					<div id="div2" class="direction-l l-div">
 						<div class="flag-wrapper">
-							<span class="flag">4,67,044</span>	
+							<span class="" style="font-size: 20px;">4,67,044</span>	
 						</div>
 						<div class="desc">A total of <b>4,67,044</b> road accidents have been reported by States and Union Territories (UTs) in the calendar year 2018, claiming 1,51,417 lives and causing injuries to 4,69,418 persons</div>
 					</div>
 				</li>
 
 				
-				<div style="padding: 20px;">
+				<div  style="padding: 20px;margin-left: 250px;">
 				  	<a href="{{ url_for('static', filename='test1.html') }}">
-	  					<span>Let's Start</span>
+	  					<span>Let's GO !</span>
 	  					<div class="liquid"></div>
 	  				</a>
   				</div>
