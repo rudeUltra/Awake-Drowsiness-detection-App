@@ -21,6 +21,8 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 
+#lets goo xD testing commit
+
 style.use('fivethirtyeight')
 # Creating the dataset 
 def assure_path_exists(path):
