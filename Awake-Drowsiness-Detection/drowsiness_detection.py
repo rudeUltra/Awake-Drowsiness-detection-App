@@ -47,7 +47,7 @@ args = vars(ap.parse_args())
 # Declare a constant which will work as the threshold for EAR value, below which it will be regared as a blink 
 EAR_THRESHOLD = 0.3
 # Declare another costant to hold the consecutive number of frames to consider for a blink 
-CONSECUTIVE_FRAMES = 20 
+CONSECUTIVE_FRAMES = 10 
 # Another constant which will work as a threshold for MAR value
 MAR_THRESHOLD = 14
 
@@ -134,7 +134,7 @@ while True:
 
 			if FRAME_COUNT >= CONSECUTIVE_FRAMES: 
 				count_sleep += 1
-				# Add the frame to the dataset ar a proof of drowsy driving
+				# Add the frame to the dataset as a proof of drowsy driving
 				cv2.imwrite("dataset/frame_sleep%d.jpg" % count_sleep, frame)
 				playsound('sound files/alarm.mp3')
 				cv2.putText(frame, "DROWSINESS ALERT!", (270, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
