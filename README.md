@@ -1,7 +1,6 @@
 # Awake-Drowsiness-detection-App
 <h2>Drowsiness Detection app For Drivers
 made by OpenCV python and dlib library</h2>
-
 <h4>Prevents accidents by alarming the driver when he/she feels drowsy Made by OpenCV, Python and dlib Library. Simple Interface using HTML/CSS and JavaScript</h4>
 
 ![](https://github.com/rudeUltra/Personal-portfolio/blob/main/assets/img/drowsiness.gif)
